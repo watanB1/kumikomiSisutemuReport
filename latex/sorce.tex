@@ -1,0 +1,112 @@
+\documentclass{jarticle}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=t,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+%\lstset{style=mystyle}
+\lstset{
+	%プログラム言語(複数の言語に対応，C,C++も可)
+ 	language = HTML,
+ 	%背景色と透過度
+ 	backgroundcolor={\color[gray]{.90}},
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%自動開業後のインデント量(デフォルトでは20[pt])	
+ 	breakindent = 10pt,
+ 	%標準の書体
+ 	basicstyle = \ttfamily\scriptsize,
+ 	%basicstyle = {\small}
+ 	%コメントの書体
+ 	commentstyle = {\itshape \color[cmyk]{1,0.4,1,0}},
+ 	%関数名等の色の設定
+ 	classoffset = 0,
+ 	%キーワード(int, ifなど)の書体
+ 	keywordstyle = {\bfseries \color[cmyk]{0,1,0,0}},
+ 	%""で囲まれたなどの"文字"の書体
+ 	stringstyle = {\ttfamily \color[rgb]{0,0,1}},
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = TBrl,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%右マージン
+ 	%xrightmargin=0zw,
+ 	%左マージン
+	%xleftmargin=3zw,
+	%行番号の書体
+ 	numberstyle = \tiny,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+\title{Code Listing}
+\date{ }
+
+\begin{document}
+
+\maketitle
+
+\section{Code examples}
+
+プログラムはListing\ref{kadai3}のようになる。
+%Python code highlighting
+\begin{lstlisting}[language=HTML, caption=HTMLのプログラム例,label=kadai3]
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+</head>
+<body>
+  <br />
+    This is a template for Monaca app for プロジェクト実習実験.
+    <input id="x"/>
+    <input id="y"/>
+    <button onclick="setText();">Set</button>
+    <div id="text">This is text.</div>
+</body>
+</html>
+\end{lstlisting}
+
+%\lstlistoflistings
+
+\end{document}
